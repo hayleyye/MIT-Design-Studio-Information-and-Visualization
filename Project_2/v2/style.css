@@ -1,0 +1,181 @@
+body {
+    padding: 50px;
+}
+
+#mobile1,#mobile2 {
+    width: 414px;
+    height: 736px;
+    border: 1px solid;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:40px;
+}
+
+h1{
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 16pt;
+}
+
+h2{
+    margin-top: 35px;
+    text-align: center;
+    font-size: 15pt;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    /*margin-bottom: 20px;*/
+}
+
+p{
+/*    FOR TEXT DESCRIBING EACH DASHBOARD*/
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#summary {
+    width: 414px;
+    height: 368px;
+/*    border: 1px solid;*/
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plot2 {
+    width: 414px;
+    height: 368px;
+/*    border: 1px solid;*/
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#feelslike {
+    text-align: center;
+    font-size: 23.5px;
+    margin-bottom: 0;
+}
+#currenttemp {
+    text-align: center;
+    font-size: 125px;
+    margin-bottom: 0;
+    margin-left: 45px;
+}
+#currentsummary {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
+}
+#forecast {
+    text-align: center;
+}
+
+/*FIRST DASHBOARD*/
+.weather {
+    fill: none;
+    stroke: #ccacad;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.weatherArea {
+    fill: rgba(204,172,172,.5);
+}
+
+
+/*SECOND DASHBOARD*/
+.weatherHigh {
+    fill: none;
+    stroke: #ccacad;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.weatherLow {
+    fill: none;
+    stroke: #b2ced2;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.weatherAreaHigh {
+    fill: #ccacad;
+}
+.weatherAreaLow {
+    fill: #b2ced2;
+}
+.skyClear {
+    fill: #afc4d3;
+}
+.skyPartlyCloudy {
+    fill: #d3d9e2;
+}
+.skyCloudy {
+    fill: #e2e2e2;
+}
+.skySunny {
+    fill: #eff7d7;
+}
+.skySnow {
+    fill: #f2f2f2;
+}
+.skyRain {
+    fill: #bfbfbf;
+}
+.skyArea {
+    fill: #d3d9e2;
+}
+.weatherDots {
+    stroke: #f9bd09;
+    stroke-width: 2px;
+    fill: white;
+}
+
+.meanWeather {
+    stroke: #d45600;
+    stroke-dasharray: 3px 1px;
+    stroke-width: 1px;
+}
+
+
+
+.axis-y .tick line  {
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+    stroke: #e8eced;
+}
+
+
+.axis-x .tick line, .axis-x .tick path {
+    stroke-width: 1px;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis-y path {
+    display: none;
+}
+
+#plot3 {
+    width: 414px;
+    height: 368px;
+/*    border: 1px solid;*/
+    float: up;
+    margin-left: auto;
+    margin-right: auto;
+}
