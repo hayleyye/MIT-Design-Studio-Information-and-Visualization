@@ -13,6 +13,7 @@ d3.json("data/boston_weather.json",draw);
 
 
 function draw(error,data){
+<<<<<<< HEAD
     //get current hour
     var d = new Date(data.currently.time*1000);
     var currenthour = d.getHours();
@@ -95,4 +96,7 @@ function draw(error,data){
         .attr("class", "weatherArea") // this is the same class that we have selected before
         .attr("d",areaWeather);
 
+=======
+    console.log(data);
+>>>>>>> upstream/master
 }
