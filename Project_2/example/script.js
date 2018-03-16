@@ -40,6 +40,9 @@ function draw(error,data){
     // data is until wednesday. We only want 24 hours --> filter data
     var todayNow = new Date ().getTime()/1000;
     var tomorrow = new Date ().getTime()/1000 + 24 * 3600;
+    
+//    var todayNow = new Date (data.currently.time*1000);
+//    var tomorrow = new Date (data.currently.time*1000+(24*3600));
 
     var data24h = todayWeather.filter(function(d){
         return d.time >= todayNow && d.time <= tomorrow

@@ -30,6 +30,9 @@ h2{
     /*margin-bottom: 20px;*/
 }
 
+p{
+    text-align: center;
+}
 .rotate90 {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -39,7 +42,13 @@ h2{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
+.title {
+    font-size: 10pt;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
 #summary {
     width: 414px;
     height: 368px;
@@ -60,73 +69,31 @@ h2{
 
 #feelslike {
     text-align: center;
-    font-size: 20px;
+    font-size: 23.5px;
+    margin-bottom: 0;
 }
 #currenttemp {
     text-align: center;
-    font-size: 100px;
+    font-size: 125px;
     margin-bottom: 0;
+    margin-left: 45px;
 }
 #currentsummary {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 0;
-}
-
-#date {
-    text-align: center;
-    font-weight: 800;
-    font-size: 40px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    color: #dcdcdc;
 }
 
 .weather {
     fill: none;
-    stroke: #f9bd09;
-    stroke-width: 4px;
+    stroke: #ccacad;
+    stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 .weatherArea {
-    fill: rgba(249, 201, 145, 0.3);
-}
-
-.weatherDots {
-    stroke: #f9bd09;
-    stroke-width: 2px;
-    fill: white;
-}
-
-.meanWeather {
-    stroke: #d45600;
-    stroke-dasharray: 3px 1px;
-    stroke-width: 1px;
-}
-
-.weatherNumbers {
-    text-anchor: middle;
-    font-size:7.5pt;
-    fill: black;
-}
-
-.weekWeather .lines {
-    stroke: #d6d6d6;
-    stroke-width: 2px;
-}
-
-.weekWeather .maxDots {
-    stroke: #d44d05;
-    fill: white;
-    stroke-width: 2px;
-}
-
-.weekWeather .minDots {
-    stroke-width: 2px;
-    fill: white;
-    stroke: #0998f9;
+    fill: rgba(204,172,172,.5);
 }
 
 .axis-y .tick line  {
