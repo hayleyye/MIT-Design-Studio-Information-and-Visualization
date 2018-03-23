@@ -13,7 +13,7 @@ var currentHours = currentTime.getHours();
 var currentMinutes = currentTime.getMinutes();
 var currentSeconds = currentTime.getSeconds();
 
-ctx5.fillStyle = "#000099";
+ctx5.fillStyle = "#80aaff";
 
 var min_unit = 20;
 var bar_width = 20;

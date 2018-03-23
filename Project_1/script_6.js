@@ -19,7 +19,7 @@ var r_sec = 75;
 var r_min = 50;
 var r_hrs = 25;
 
-ctx6.strokeStyle = "#000099";
+ctx6.strokeStyle = "#80aaff";
 ctx6.lineWidth = line_w;
 ctx6.beginPath();
 
