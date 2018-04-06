@@ -11,6 +11,7 @@ var plot1 = d3.select('#plot1') // if we select a html id #name, if we select a 
     .attr('height', height + margin.t + margin.b);
 
 // function to draw the map
+var path = d3.geoPath();
 
 // queue data files, parse them and use them
 var queue = d3.queue()
@@ -20,16 +21,43 @@ var queue = d3.queue()
 
 function dataloaded (err,data,map){
 
+    console.log(data);
+    console.log(map);
+    
     // get max and min values of data
-
+    var extentData = d3.extent(data,function(d){ return d.total});
+    var colorScale = d3.scaleLinear().domain(extentData).range(["#ffc5c0","#ab0405"]);
+    
     // scale Color for the map
 
     // Bind the data to the SVG and create one path per GeoJSON feature
+    
+    plot1.selectAll(".state")
+        .data(topojson.feature(map,map.objects.states).features)
+        .enter()
+        .append('path')
+        .attr("d",path)
+        .attr("class","state")
+        .style("fill",function(d){
+            var mapID = +d.id;
+            var color;
+            data.forEach(function(e){ 
+                if (e.id===mapID){
+                    color = colorScale(e.total)
+                }
+            })
+            return color
+        });
 
 }
 
 
 
 function parseData(d){
-
+    var id =d.Id.split("US")[1];
+    return {
+        id: +id,
+        state: d.state,
+        total: +d["Total; Estimate; Population 3 years and over enrolled in school"]
+    }
 }
