@@ -95,7 +95,7 @@ function draw(error,data){
     var areaWeather = d3.area()
         .x(function(d) { return scaleX(new Date (d.time*1000)); })
         .y1(function(d) { return scaleY(d.temperature); })
-        .y0(function(d) { return scaleY(32); });
+        .y0(function(d) { return scaleY(48); });
     
     plot2.select('.todayWeather')
         .datum(data12h) //select the data
@@ -143,7 +143,7 @@ function draw(error,data){
     var highArea = d3.area()
         .x(function(d){ return scaleX3(new Date (d.time*1000));})
         .y1(function(d){ return scaleY3(d.temperatureHigh);})
-        .y0(function(d){ return scaleY3(0)});
+        .y0(function(d){ return scaleY3(d.temperatureMin)});
     
     plot3.select('.weekWeather').datum(weekWeather).append("path").attr("class","weatherAreaHigh").attr("d",highArea);
     
@@ -165,8 +165,8 @@ function draw(error,data){
     //fill in above line for highs (sky)
     var skyArea = d3.area()
         .x(function(d){ return scaleX3(new Date (d.time*1000));})
-        .y0(function(d){ return scaleY3(d.temperatureHigh);})
-        .y1(function(d){ return scaleY3(50)});
+        .y1(function(d){ return scaleY3(80);})
+        .y0(function(d){ return scaleY3(d.temperatureHigh);});
     
 //    plot3.select('.weekWeather').datum(weekWeather).append("path").attr("class","skyRain").attr("d",skyArea);
 
